@@ -1,0 +1,172 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}Liber - Заказ такси онлайн{% endblock %}
+{% block content %}
+{% include 'header.html' %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="slider col-12">
+            <div class="fotorama" data-width="100%" data-ratio="16/3" data-nav="false" data-autoplay="true"
+                 data-loop="true">
+                <div class="slide">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-3">
+                                <h1>Lorem ipsum.</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laborum
+                                    accusantium atque optio sunt cum maiores aut. Enim eius ducimus molestias itaque
+                                    veritatis atque, modi fugiat dolorem consequatur, mollitia, distinctio, dolore
+                                    minus. At, deleniti accusamus delectus voluptatem enim illum optio aspernatur beatae
+                                    sit nulla possimus quas vel sunt dolorem voluptate!</p>
+                            </div>
+                            <div class="col-1 offset-8">
+                                <button class="btn slider_button"><h4>Перейти</h4></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-3">
+                                <h1>Lorem ipsum.</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laborum
+                                    accusantium atque optio sunt cum maiores aut. Enim eius ducimus molestias itaque
+                                    veritatis atque, modi fugiat dolorem consequatur, mollitia, distinctio, dolore
+                                    minus. At, deleniti accusamus delectus voluptatem enim illum optio aspernatur beatae
+                                    sit nulla possimus quas vel sunt dolorem voluptate!</p>
+                            </div>
+                            <div class="col-1 offset-8">
+                                <button class="btn slider_button"><h4>Перейти</h4></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-3">
+                                <h1>Lorem ipsum.</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laborum
+                                    accusantium atque optio sunt cum maiores aut. Enim eius ducimus molestias itaque
+                                    veritatis atque, modi fugiat dolorem consequatur, mollitia, distinctio, dolore
+                                    minus. At, deleniti accusamus delectus voluptatem enim illum optio aspernatur beatae
+                                    sit nulla possimus quas vel sunt dolorem voluptate!</p>
+                            </div>
+                            <div class="col-1 offset-8">
+                                <button class="btn slider_button"><h4>Перейти</h4></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modules row">
+        <a class="module_selected" href="/">
+            <div class="text-center">
+                <img src="{% static 'img/taxi.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Такси</h4>
+            </div>
+        </a>
+        <a class="module" href="/food">
+            <div class="text-center">
+                <img src="{% static 'img/food.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Еда</h4>
+            </div>
+        </a>
+        <a class="module" href="/product">
+            <div class="text-center">
+                <img src="{% static 'img/product.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Продукты</h4>
+            </div>
+        </a>
+        <a class="module" href="/cargo">
+            <div class="text-center">
+                <img src="{% static 'img/cargo.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Грузовики</h4>
+            </div>
+        </a>
+        <a class="module" href="/harw">
+            <div class="text-center">
+                <img src="{% static 'img/harw.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Спецтехника</h4>
+            </div>
+        </a>
+    </div>
+    <div class="row">
+        <div class="taxi_order col-4">
+            <h1 class="text-center">Заказ такси</h1>
+            <h4>Выберите свое местонахождение</h4>
+            <input type="text" class="form-control">
+            <h4>Выберите место назначения</h4>
+            <input type="text" class="form-control">
+            <h4>Выберите тариф</h4>
+            <div class="price">
+                <input type="radio" name="price" id="eco">
+                <label for="eco">
+                    <h5 class="text-center">Эконом</h5>
+                </label>
+            </div>
+            <div class="price">
+                <input type="radio" name="price" id="stand" checked>
+                <label for="stand">
+                    <h5 class="text-center">Стандарт</h5>
+                </label>
+            </div>
+            <div class="price">
+                <input type="radio" name="price" id="com">
+                <label for="com">
+                    <h5 class="text-center">Комфорт</h5>
+                </label>
+            </div>
+            <h4>Дополнительные опции</h4>
+            <div class="options">
+                <input type="checkbox" name="options" id="deliver">
+                <label for="deliver">
+                    <h5 class="text-center">Доставка</h5>
+                </label>
+            </div>
+            <div class="options">
+                <input type="checkbox" name="options" id="condit">
+                <label for="condit">
+                    <h5 class="text-center">Кондиционер</h5>
+                </label>
+            </div>
+            <div class="options">
+                <input type="checkbox" name="options" id="animal">
+                <label for="animal">
+                    <h5 class="text-center">Животное в машине</h5>
+                </label>
+            </div>
+            <div class="options">
+                <input type="checkbox" name="options" id="smoking">
+                <label for="smoking">
+                    <h5 class="text-center">Курящий салон</h5>
+                </label>
+            </div>
+            <div class="text-center">
+                <a href="#" class='open-modal_modal' data-modal_modal="#modal_modal3">
+                    <button class="btn order_submit">Заказать</button>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-8">
+            <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A909ddf8e0a29669ea04d8bc784ac183780c8d76b6d035fc3ead6b86e6572f9e8&amp;width=100%&amp;height=700&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'header.html' %}
+<h1>Hello</h1>
+
+<h1>{{dish.name}}</h1>
+<h2>{{dish.description}}</h2>
+<img src="{{dish.img.url}}" alt="">
+{% include 'footer.html' %}
+</body>
+</html>

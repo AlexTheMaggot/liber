@@ -1,0 +1,97 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}{{ restaurant.name }}{% endblock %}
+{% block content %}
+{% include 'header.html' %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="slider col-12">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <h1>{{restaurant.name}}</h1>
+                        <p>{{restaurant.description}}</p>
+                        <img src="{{ restaurant.img.url }}" alt="" height="200">
+                    </div>
+                    <div class="col-1 offset-8">
+                        <button class="btn slider_button"><h4>Перейти</h4></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modules row">
+        <a class="module" href="/">
+            <div class="text-center">
+                <img src="{% static 'img/taxi.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Такси</h4>
+            </div>
+        </a>
+        <a class="module_selected" href="/food">
+            <div class="text-center">
+                <img src="{% static 'img/food.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Еда</h4>
+            </div>
+        </a>
+        <a class="module" href="/product">
+            <div class="text-center">
+                <img src="{% static 'img/product.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Продукты</h4>
+            </div>
+        </a>
+        <a class="module" href="/cargo">
+            <div class="text-center">
+                <img src="{% static 'img/cargo.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Грузовики</h4>
+            </div>
+        </a>
+        <a class="module" href="/harw">
+            <div class="text-center">
+                <img src="{% static 'img/harw.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Спецтехника</h4>
+            </div>
+        </a>
+    </div>
+
+    
+
+    {% for d in restaurant.restaurant.all %}
+    <h1>{{ d.category }}</h1>
+    <div class="col-3">
+        <a href="{{d.slug_dish}}/">
+            <div class="restaurant">
+                <img class="restaurant_img" src="{{d.img.url}}" alt="">
+                <p class="restaurant_title">{{d.name}}</p>
+                {% if d.available == True %}
+                <p class="restaurant_rating">В наличии</p>
+                {% else %}
+                <p class="restaurant_rating">Нет в наличии</p>
+                {% endif %}
+                <p class="restaurant_categories">{{d.description}}</p>
+                <p class="restaurant_rating">{{d.price}} сум</p>
+                <form action="{% url 'foodcart:cart_add' d.id %}" method="post">
+                    {{ cart_product_form }}
+                    {% csrf_token %}
+                    <input type="submit" value="Add to cart" class="btn btn-success">
+                </form>
+            </div>
+        </a>
+    </div>
+    <div style="width: 100%; height: 3px; background-color: #303030; margin: 30px 0 30px 0;"></div>
+    {% endfor %}
+</div>
+{% include 'footer.html' %}
+{% endblock %}
+
+<!--TODO: remake list view (split on categories (category, list of dishes, next category))
+    TODO: try regroup-->

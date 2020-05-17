@@ -1,0 +1,317 @@
+@import "bootstrap.css";
+@import "fotorama.css";
+header .logo img {
+  height: 70px;
+  margin: -10px 0 0 15px;
+}
+header .logo h3 {
+  margin: 40px 0 0 10px;
+  display: inline-block;
+}
+header .geo {
+  width: 200px;
+  margin: 45px 0 0 10px;
+}
+header .geo::after {
+  content: "";
+  display: block;
+  margin-top: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  transform-origin: 0%;
+  transform: scaleX(0);
+  transition: all 0.3s;
+}
+header .geo:hover::after {
+  transform: scaleX(1);
+}
+header .geo input {
+  width: 200px;
+  border: none;
+  transition: all 0.2s;
+}
+header .geo input:focus {
+  outline: none;
+  border-bottom: 2px solid #000000;
+}
+header .sign_up {
+  display: inline-block;
+  margin: 45px 10px 0 0;
+  color: #000000;
+}
+header .sign_up:hover {
+  text-decoration: none;
+  color: #5FB709;
+}
+.copyright {
+  margin: 20px 0;
+}
+.taxi_order {
+  background-color: #000000;
+}
+.taxi_order h1 {
+  margin-top: 20px;
+  color: #FFFFFF;
+}
+.taxi_order h4 {
+  margin-top: 20px;
+  color: #FFFFFF;
+}
+.price {
+  display: inline-block;
+  margin: 10px;
+}
+.price input {
+  display: none;
+}
+.price input + label h5 {
+  display: inline-block;
+  height: 50px;
+  padding: 9px 10px;
+  background-color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.price input + label h5:hover {
+  border: 3px solid #5FB709;
+  cursor: pointer;
+}
+.price input:checked + label h5 {
+  background-color: #5FB709;
+  border: 3px solid #5FB709;
+  color: #FFFFFF;
+}
+.options {
+  display: inline-block;
+  margin: 10px 0 -15px 5px;
+}
+.options input {
+  display: none;
+}
+.options input + label h5 {
+  display: inline-block;
+  height: 50px;
+  padding: 9px 5px 0 5px;
+  background-color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.options input + label h5:hover {
+  border: 3px solid #5FB709;
+  cursor: pointer;
+}
+.options input:checked + label h5 {
+  background-color: #5FB709;
+  border: 3px solid #5FB709;
+  color: #FFFFFF;
+}
+.order_submit {
+  margin: 30px 0;
+  background-color: #5FB709;
+  color: #FFFFFF;
+  transition: all 0.3s;
+}
+.order_submit:hover {
+  background-color: #478806;
+  color: #FFFFFF;
+}
+.title_thanks {
+  margin-bottom: 30px;
+}
+.food_category {
+  display: inline-block;
+  margin: 10px 3px;
+  padding: 13px 10px 0 10px;
+  border-radius: 10px;
+  color: #000;
+  transition: all 0.3s;
+}
+.food_category:hover {
+  text-decoration: none;
+  background-color: #5fb709;
+  color: #fff;
+}
+.food_category img {
+  height: 30px;
+}
+.food_category p {
+  display: inline-block;
+}
+.restaurant {
+  padding-bottom: 10px;
+  width: 100%;
+  box-shadow: 10px 10px 20px 1px #ccc;
+  transition: all 0.2s;
+  border-radius: 30px;
+}
+.restaurant:hover {
+  transform: scale(1.01);
+}
+.restaurant_img {
+  width: 100%;
+  border-radius: 30px;
+}
+.restaurant_time {
+  position: absolute;
+  margin-top: -17px;
+  margin-left: 30px;
+  padding: 5px 10px;
+  background: #fff;
+  border-radius: 100px;
+  color: #333333;
+}
+.restaurant_title {
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #333333;
+}
+.restaurant_rating {
+  background-color: #5fb709;
+  width: fit-content;
+  margin-top: 0;
+  margin-left: 5px;
+  padding: 5px 10px;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #fff;
+}
+.restaurant_categories {
+  margin-left: 5px;
+  color: #aaa;
+}
+a:hover {
+  text-decoration: none;
+}
+.slider {
+  padding: 0;
+  margin: 10px 0;
+}
+.slider .slide {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: url(../img/slider-background.jpg);
+  color: #FFFFFF;
+}
+.slider .slider_button {
+  margin: 200px 0 0 -70px;
+  padding: 10px 15px 5px;
+  background-color: #5FB709;
+  color: #FFFFFF;
+}
+.slider .slider_button:hover {
+  background-color: #478806;
+}
+.module {
+  width: 170px;
+  display: inline-block;
+  margin: 15px 0 15px 30px;
+  border: 2px solid #5FB709;
+  border-radius: 10px;
+  transition: all 0.3s;
+  color: #000000;
+}
+.module:hover {
+  text-decoration: none;
+  color: #000000;
+  background-color: #5FB709;
+}
+.module img {
+  height: 50px;
+  margin: 5px;
+}
+.module_selected {
+  width: 170px;
+  display: inline-block;
+  margin: 15px 0 15px 30px;
+  border: 2px solid #5FB709;
+  border-radius: 10px;
+  transition: all 0.3s;
+  color: #000000;
+  background-color: #5FB709;
+}
+.module_selected:hover {
+  text-decoration: none;
+  color: #000000;
+  background-color: #5FB709;
+}
+.module_selected img {
+  height: 50px;
+  margin: 5px;
+}
+.module_selected:hover {
+  text-decoration: none;
+  color: #000000;
+}
+.module_selected img {
+  height: 50px;
+  margin: 5px;
+}
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal_modal {
+  background: #FFFFFF;
+  text-align: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+.overlay .modal_modal.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal_modal.open .content {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay .modal_modal .content {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay .modal_modal .title {
+  margin-top: 0;
+}
+.sign_up_phonenumber {
+  width: 50%;
+  margin: 20px 0 20px 25%;
+}
+.sign_up_submit {
+  background-color: #5FB709;
+  color: #000000;
+}
+.sign_up_submit:hover {
+  background-color: #478806;
+}
+/*# sourceMappingURL=style.css.map */

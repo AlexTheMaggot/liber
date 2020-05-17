@@ -1,0 +1,14 @@
+{% load static %}
+{% block content %}
+{% for item in cart %}
+    {% with product=item.product %}
+        <h1>{{ product.name }}</h1>
+        <h3>{{ item.quantity }}</h3>
+        <h3>Price: {{ item.price }}</h3>
+        <h2>Total Price: {{ item.total_price }}</h2>
+        <a href="{% url 'cart:cart_remove' product.id %}">Remove</a>
+    {% endwith %}
+{% endfor %}
+<h1>Total: {{ cart.get_total_price }} </h1>
+<a href="{% url 'food:dish_list' %}">Continue Shopping</a>
+{% endblock %}

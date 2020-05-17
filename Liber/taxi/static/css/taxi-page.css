@@ -1,0 +1,72 @@
+.taxi_order {
+  background-color: #000000;
+}
+.taxi_order h1 {
+  margin-top: 20px;
+  color: #FFFFFF;
+}
+.taxi_order h4 {
+  margin-top: 20px;
+  color: #FFFFFF;
+}
+.price {
+  display: inline-block;
+  margin: 10px;
+}
+.price input {
+  display: none;
+}
+.price input + label h5 {
+  display: inline-block;
+  height: 50px;
+  padding: 9px 10px;
+  background-color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.price input + label h5:hover {
+  border: 3px solid #5FB709;
+  cursor: pointer;
+}
+.price input:checked + label h5 {
+  background-color: #5FB709;
+  border: 3px solid #5FB709;
+  color: #FFFFFF;
+}
+.options {
+  display: inline-block;
+  margin: 10px 0 -15px 5px;
+}
+.options input {
+  display: none;
+}
+.options input + label h5 {
+  display: inline-block;
+  height: 50px;
+  padding: 9px 5px 0 5px;
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.options input + label h5:hover {
+  border: 3px solid #5FB709;
+  cursor: pointer;
+}
+.options input:checked + label h5 {
+  background-color: #5FB709;
+  border: 3px solid #5FB709;
+  color: #FFFFFF;
+}
+.order_submit {
+  margin: 30px 0;
+  background-color: #5FB709;
+  color: #FFFFFF;
+  transition: all 0.3s;
+}
+.order_submit:hover {
+  background-color: #478806;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=taxi-page.css.map */

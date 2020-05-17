@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Liber - Заказ такси{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+<div class='modal_modal' id='modal_modal1'>
+    <div class='content'>
+        <h1 class='title'>Введите номер телефона</h1>
+        <input class="sign_up_phonenumber form-control" type="text" placeholder="998901234567">
+        <button class="btn sign_up_submit">Отправить</button>
+        <a class='btn btn-dark close-modal_modal' data-modal_modal="#modal_modal1" href="#">Отмена</a>
+    </div>
+</div>
+<div class='modal_modal' id='modal_modal2'>
+    <div class='content'>
+        <h1 class='title'>Введите номер телефона и пароль</h1>
+        <input class="sign_up_phonenumber form-control" type="text" placeholder="998901234567">
+        <input class="sign_up_phonenumber form-control" type="text" placeholder="Пароль">
+        <button class="btn sign_up_submit">Отправить</button>
+        <a class='btn btn-dark close-modal_modal' data-modal_modal="#modal_modal2" href="#">Отмена</a>
+    </div>
+</div>
+<div class='modal_modal' id='modal_modal3'>
+    <div class='content'>
+        <h1 class='title_thanks'>Ваша заявка принята, ожидайте!</h1>
+        <a class='btn btn-dark close-modal_modal' data-modal_modal="#modal_modal3" href="#">Закрыть</a>
+    </div>
+</div>
+<script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+<script src="{% static 'js/fotorama.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}Liber - Заказ продуктов на дом и в офис онлайн{% endblock %}
+{% block content %}
+{% include 'header.html' %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="slider col-12">
+            <div class="fotorama" data-width="100%" data-ratio="16/3" data-nav="false" data-autoplay="true"
+                 data-loop="true">
+                <div class="slide">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-3">
+                                <h1>Lorem ipsum.</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laborum
+                                    accusantium atque optio sunt cum maiores aut. Enim eius ducimus molestias itaque
+                                    veritatis atque, modi fugiat dolorem consequatur, mollitia, distinctio, dolore
+                                    minus. At, deleniti accusamus delectus voluptatem enim illum optio aspernatur beatae
+                                    sit nulla possimus quas vel sunt dolorem voluptate!</p>
+                            </div>
+                            <div class="col-1 offset-8">
+                                <button class="btn slider_button"><h4>Перейти</h4></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-3">
+                                <h1>Lorem ipsum.</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laborum
+                                    accusantium atque optio sunt cum maiores aut. Enim eius ducimus molestias itaque
+                                    veritatis atque, modi fugiat dolorem consequatur, mollitia, distinctio, dolore
+                                    minus. At, deleniti accusamus delectus voluptatem enim illum optio aspernatur beatae
+                                    sit nulla possimus quas vel sunt dolorem voluptate!</p>
+                            </div>
+                            <div class="col-1 offset-8">
+                                <button class="btn slider_button"><h4>Перейти</h4></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-3">
+                                <h1>Lorem ipsum.</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laborum
+                                    accusantium atque optio sunt cum maiores aut. Enim eius ducimus molestias itaque
+                                    veritatis atque, modi fugiat dolorem consequatur, mollitia, distinctio, dolore
+                                    minus. At, deleniti accusamus delectus voluptatem enim illum optio aspernatur beatae
+                                    sit nulla possimus quas vel sunt dolorem voluptate!</p>
+                            </div>
+                            <div class="col-1 offset-8">
+                                <button class="btn slider_button"><h4>Перейти</h4></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modules row">
+        <a class="module" href="/">
+            <div class="text-center">
+                <img src="{% static 'img/taxi.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Такси</h4>
+            </div>
+        </a>
+        <a class="module" href="/food">
+            <div class="text-center">
+                <img src="{% static 'img/food.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Еда</h4>
+            </div>
+        </a>
+        <a class="module_selected" href="/product">
+            <div class="text-center">
+                <img src="{% static 'img/product.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Продукты</h4>
+            </div>
+        </a>
+        <a class="module" href="/cargo">
+            <div class="text-center">
+                <img src="{% static 'img/cargo.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Грузовики</h4>
+            </div>
+        </a>
+        <a class="module" href="/harw">
+            <div class="text-center">
+                <img src="{% static 'img/harw.png' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h4>Спецтехника</h4>
+            </div>
+        </a>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h1 class="restaurants_title">Магазины</h1>
+        </div>
+        <div class="col-4 restaurants">
+            <img class="restaurant_img" src="{% static 'img/shops/IMG_4687.jpg' %}" alt="">
+            <h3 class="restaurant_title">Farovon-uz</h3>
+            <h6 class="restaurant_time">15-20 мин</h6>
+            <h6 class="restaurant_rating">4.5</h6>
+            <h6 class="restaurant_categories">Супермаркет</h6>
+        </div>
+        <div class="col-4 restaurants">
+            <img class="restaurant_img" src="{% static 'img/shops/IMG_4687.jpg' %}" alt="">
+            <h3 class="restaurant_title">Farovon-uz</h3>
+            <h6 class="restaurant_time">15-20 мин</h6>
+            <h6 class="restaurant_rating">4.5</h6>
+            <h6 class="restaurant_categories">Супермаркет</h6>
+        </div>
+        <div class="col-4 restaurants">
+            <img class="restaurant_img" src="{% static 'img/shops/IMG_4687.jpg' %}" alt="">
+            <h3 class="restaurant_title">Farovon-uz</h3>
+            <h6 class="restaurant_time">15-20 мин</h6>
+            <h6 class="restaurant_rating">4.5</h6>
+            <h6 class="restaurant_categories">Супермаркет</h6>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}
+{% endblock %}

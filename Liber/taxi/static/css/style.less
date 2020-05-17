@@ -1,0 +1,151 @@
+@import "bootstrap.css";
+@import "fotorama.css";
+@import "colors";
+@import "header";
+@import "footer";
+@import "taxi-page";
+@import "food-restaurant-list";
+
+
+//Slider
+
+.slider {
+  padding: 0;
+  margin: 10px 0;
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background: url(../img/slider-background.jpg);
+    color: @white;
+  }
+
+  .slider_button {
+    margin: 200px 0 0 -70px;
+    padding: 10px 15px 5px;
+    background-color: @green;
+    color: @white;
+
+    &:hover {
+      background-color: @dark-green;
+    }
+  }
+}
+
+//Slider
+
+//Nav
+
+.module {
+  width: 170px;
+  display: inline-block;
+  margin: 15px 0 15px 30px;
+  border: 2px solid @green;
+  border-radius: 10px;
+  transition: all 0.3s;
+  color: @black;
+
+  &:hover {
+    text-decoration: none;
+    color: @black;
+    background-color: @green;
+  }
+
+  img {
+    height: 50px;
+    margin: 5px;
+  }
+}
+
+.module_selected {
+  .module();
+  background-color: @green;
+
+  &:hover {
+    text-decoration: none;
+    color: @black;
+  }
+
+  img {
+    height: 50px;
+    margin: 5px;
+  }
+}
+
+//Nav
+
+//Modal
+
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.overlay .modal_modal {
+  background: @white;
+  text-align: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.overlay .modal_modal.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.overlay .modal_modal.open .content {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+
+.overlay .modal_modal .content {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+
+.overlay .modal_modal .title {
+  margin-top: 0;
+}
+
+.sign_up_phonenumber {
+  width: 50%;
+  margin: 20px 0 20px 25%;
+}
+
+.sign_up_submit {
+  background-color: @green;
+  color: @black;
+
+  &:hover {
+    background-color: @dark-green;
+  }
+}
+
+//Modal
